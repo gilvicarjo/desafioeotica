@@ -2,25 +2,26 @@
 
 Instalacao do Cluster Kubernetes
 -------------------------------------------------------------------------------
-
-### /etc/modules-load.d/k8s.conf
-### curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-### echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
-### apt-get install -y kubelet kubeadm kubectl
-### kubeadm config images pull
-### kubeadm init
-### mkdir -p $HOME/.kube
-### sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-### sudo chown $(id -u):$(id -g) $HOME/.kube/config
-### kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
-### apt-get install bash-completion
-### kubectl completion bash > /etc/bash_completion.d/kubectl
-### iptables -I INPUT 5 -i ens3 -p tcp --dport 6443 -m state --state NEW,ESTABLISHED -j ACCEPT
-### mkdir /opt/k8s/deployments/mongodb/
-### kubectl -apply -f namespace.yaml
-### kubectl -apply -f statefulsets.yaml
-### kubectl -apply -f memorylimit.yaml
-### kubectl -apply -f servicelb.yaml
+```
+/etc/modules-load.d/k8s.conf
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+apt-get install -y kubelet kubeadm kubectl
+kubeadm config images pull
+kubeadm init
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+apt-get install bash-completion
+kubectl completion bash > /etc/bash_completion.d/kubectl
+iptables -I INPUT 5 -i ens3 -p tcp --dport 6443 -m state --state NEW,ESTABLISHED -j ACCEPT
+mkdir /opt/k8s/deployments/mongodb/
+kubectl -apply -f namespace.yaml
+kubectl -apply -f statefulsets.yaml
+kubectl -apply -f memorylimit.yaml
+kubectl -apply -f servicelb.yaml
+```
 
 Valicadao do Servico do Mongo
 -------------------------------------------------------------------------------
