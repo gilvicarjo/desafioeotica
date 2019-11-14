@@ -110,10 +110,10 @@ spec:
 Instrucao de Acesso
 -------------------------------------------------------------------------------
 
-### Acesso SSH:
+### Acesso SSH
 
-User: ubuntu
-Private Key:
+#### User: ubuntu
+#### Private Key:
 
 -----BEGIN RSA PRIVATE KEY-----
 MIIEpAIBAAKCAQEA8xNXNBZj30XvBbPYJ2iFpwQk8uaudfypCghLhvEp479+b9Tg
@@ -143,43 +143,48 @@ ibrAQQKBgQCblK42Z9NX5BxGFKRJ8LTcgWFp7BEZoxLxf9ScSptug96aieo4Dk58
 il+eUMXNUxwO9rGO5v4+Kc/PMonTsE8GFwI8yl0BOfi9CjNHo71c0Q==
 -----END RSA PRIVATE KEY-----
 
-### Maquinas K8s
+#### Maquinas K8s
 
 k8s01 (master): 140.238.184.21
+
 k8s02 (worker): 140.238.184.213
+
 k8s03 (worker): 152.67.46.149
 
 Oracle Cloud
 -------------------------------------------------------------------------------
 
 Acesso: https://console.sa-saopaulo-1.oraclecloud.com/
+
 Tenant: gilvicarjo
+
 User Name: gilvicente.araujo@gmail.com
+
 Senha: O2:Vx9yHUcWFD9lL&GWS
 
 GitHub
 -------------------------------------------------------------------------------
 
-### https://github.com/gilvicarjo/desafioeotica.git 
-### git@github.com:gilvicarjo/desafioeotica.git
+#### https://github.com/gilvicarjo/desafioeotica.git 
+#### git@github.com:gilvicarjo/desafioeotica.git
 
-### Última versão 4 estável do MongoDB Standalone
+#### Última versão 4 estável do MongoDB Standalone
 
 statefulsets.yaml
  
-### Usuário e senha para autenticação: user / 30t1c4
+#### Usuário e senha para autenticação
 
 statefulsets.yaml
 
-### Limitar o uso de memória em 600MB
+#### Limitar o uso de memória
 
 memorylimit.yaml
 
-### Namespace: mongodb
+#### Namespace: mongodb
   
 namespace.yaml
 
-### Criar um serviço de Loadbalancer para a porta 27017
+#### Criar um serviço de Loadbalancer
 
 servicelb.yaml
 
