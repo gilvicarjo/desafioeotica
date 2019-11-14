@@ -1,0 +1,30 @@
+---
+apiVersion: v1111111
+kind: StatefulSet
+metadata:
+  name: mongodb-standalone
+spec:
+  serviceName: database
+  replicas: 1
+  selector:
+      matchLabels:
+      app: database
+      template:
+      metadata:
+       labels:
+      app: database
+      selector: mongodb
+      spec:
+      containers:
+      - name: mongodb-standalone
+        image: mongo:4.2.1
+        env:
+        - name: MONGO_INITDB_ROOT_USERNAME
+          value: user
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          value: 30t1c4
+          ports:
+        - name: mongodb
+          containerPort: 27017
+        nodeSelector:
+            kubernetes.io/hostname: mongodb-node
